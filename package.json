@@ -4,19 +4,21 @@
   "scripts": {
     "check": "bun run src/check/index.ts",
     "submit": "bun run src/submit/index.ts",
-    "prepare": "node node_modules/puppeteer/install.mjs"
-  },
-  "devDependencies": {
-    "@types/puppeteer": "^7.0.4",
-    "bun-types": "latest"
-  },
-  "peerDependencies": {
-    "typescript": "^5.0.0"
+    "prepare": "node node_modules/puppeteer/install.mjs",
+    "format": "prettier --write src/**/*.ts"
   },
   "dependencies": {
     "axios": "^1.5.1",
     "cheerio": "^1.0.0-rc.12",
     "dotenv": "^16.3.1",
     "puppeteer": "^21.3.8"
+  },
+  "devDependencies": {
+    "@types/puppeteer": "^7.0.4",
+    "bun-types": "latest",
+    "prettier": "^3.0.3"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
   }
 }
