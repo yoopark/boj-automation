@@ -22,9 +22,12 @@ export const waitForGrading = async (page: Page): Promise<void> => {
       throw new Error('value is null');
     }
 
-    console.log(value);
+    process.stdout.clearLine(0);
+    process.stdout.cursorTo(0);
+    process.stdout.write(value);
 
     if (!GRADING_STATUS.some((s) => value.includes(s))) {
+      process.stdout.write('\n');
       isGraded = true;
     } else {
       await delay(100);
