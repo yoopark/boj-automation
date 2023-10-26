@@ -11,7 +11,7 @@ export const compareOutputs = (
 
   return outputs.map((output, index) => {
     const expectedOutput = expectedOutputs[index];
-    const isCorrect = output === expectedOutput;
+    const isCorrect = output.trimEnd() === expectedOutput.trimEnd();
 
     return {
       isCorrect,
